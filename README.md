@@ -44,12 +44,6 @@ Follow these **one-time setup steps**:
 git clone https://github.com/Tamannapanwar17/smart-tutor-ai.git
 cd smart-tutor-ai
 cd backend
-python -m venv venv
-
-# Activate virtual environment
-source venv/bin/activate      # On Linux/macOS
-# OR
-venv\Scripts\activate         # On Windows
 
 pip install -r requirements.txt
 uvicorn app:app --reload

@@ -37,7 +37,7 @@
 
 ### 🪜 1. Clone the Repository
 
-git clone https://github.com/<your-username>/learnloop-ai-tutor.git
+git clone https://github.com/Tamannapanwar17/learnloop-ai-tutor.git
 cd learnloop-ai-tutor
 
 ### 🧠 2. Install & Run Ollama (Local LLM)

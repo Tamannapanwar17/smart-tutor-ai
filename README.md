@@ -1,54 +1,58 @@
 # 📚 smart-tutor-ai — *LearnLoop*
 
-**LearnLoop** is a fully offline, open-source AI tutor that adapts to your learning style. It remembers what you ask, tracks progress, and gives smarter answers over time — with zero internet dependency.
+**LearnLoop** is an open-source, fully offline AI tutor that adapts to your learning style. It remembers your questions, tracks progress, and provides smarter responses over time — all without internet, APIs, or cloud services.
 
-> ✅ No API keys. No cloud. Just local AI magic on your machine.
-
----
-
-## 🚀 Features
-
-- ✅ **Runs 100% Locally** – No OpenAI or paid APIs  
-- ✅ **Smart Local LLMs** – Uses Ollama + Mistral or LLaMA  
-- ✅ **Learner Memory** – Remembers previous questions  
-- ✅ **ChromaDB** – Vector search to personalize tutoring  
-- ✅ **Modern UI** – Built with Next.js + Tailwind CSS  
-- ✅ **Hackathon Ready** – Quick setup, works offline  
+> 🚀 Runs 100% locally using open-source AI models like Mistral and a vector database (ChromaDB).
 
 ---
 
-## 🧠 Demo Screenshot
+## ✨ Features
 
-![LearnLoop UI](./screenshot.png)  
-<!-- Optional: Add actual screenshot or Loom/Youtube walkthrough -->
+- ✅ **No APIs, No Cloud** — Everything runs locally
+- ✅ **Local LLMs with Ollama** — Use models like Mistral or LLaMA
+- ✅ **Adaptive Memory** — Learns from your past questions
+- ✅ **ChromaDB** — Stores and retrieves learning history
+- ✅ **Modern UI** — Built with Next.js + Tailwind CSS
+- ✅ **Hackathon Friendly** — Lightweight, fast to set up
+
+---
+
+## 🖼️ Demo Screenshot
+
+![LearnLoop UI](./screenshot.png)
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer        | Tech Stack               |
-|--------------|---------------------------|
-| Frontend     | Next.js, Tailwind CSS     |
-| Backend      | FastAPI (Python)          |
-| AI Model     | Ollama + Mistral/LLaMA    |
-| Memory Store | ChromaDB (local)          |
+| Layer        | Tech Used              |
+|--------------|------------------------|
+| Frontend     | Next.js, Tailwind CSS  |
+| Backend      | FastAPI (Python)       |
+| AI Models    | Ollama + Mistral/LLaMA |
+| Vector DB    | ChromaDB (local)       |
 
 ---
 
-## ⚙️ Local Installation (No API Keys Needed)
+## ⚙️ Getting Started
 
-Follow these **one-time setup steps**:
+### 1. 🔽 Clone the Repository
 
-### 1. 📦 Clone the Project
 ```bash```
 git clone https://github.com/Tamannapanwar17/smart-tutor-ai.git
 cd smart-tutor-ai
 cd backend
+python -m venv venv
+source venv/bin/activate        # Linux/macOS
+venv\Scripts\activate           # Windows
 
 pip install -r requirements.txt
-uvicorn app:app --reload
+uvicorn app:app --reload        # Runs on http://localhost:8000
 cd ../frontend
 npm install
-npm run dev
-ollama run mistral
-git init && git add . && git commit -m "Initial commit" && gh repo create smart-tutor-ai --public --source=. --push
+npm run dev                     # Runs on http://localhost:3000
+curl -fsSL https://ollama.com/install.sh | sh
+git init
+git add .
+git commit -m "Initial commit for LearnLoop"
+gh repo create smart-tutor-ai --public --source=. --push

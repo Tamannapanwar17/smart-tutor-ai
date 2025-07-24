@@ -52,6 +52,9 @@ cd ../frontend
 npm install
 npm run dev                     # Runs on http://localhost:3000
 curl -fsSL https://ollama.com/install.sh | sh
+chmod +x install_ollama.sh
+ollama run mistral
+
 git init
 git add .
 git commit -m "Initial commit for LearnLoop"

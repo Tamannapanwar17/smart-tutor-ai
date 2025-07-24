@@ -43,7 +43,6 @@ git clone https://github.com/Tamannapanwar17/smart-tutor-ai.git
 cd smart-tutor-ai
 cd backend
 python -m venv venv
-source venv/bin/activate        # Linux/macOS
 venv\Scripts\activate           # Windows
 
 pip install -r requirements.txt

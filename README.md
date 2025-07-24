@@ -34,29 +34,23 @@
 ## 🚀 Run the App Locally (in 4 Steps)
 
 > 🛑 No internet or cloud services needed after setup.
-
-### 1️⃣ Clone the Repo
-```bash``
+# 1. Clone the repo
 git clone https://github.com/Tamannapanwar17/smart-tutor-ai.git
 cd smart-tutor-ai
+
+# 2. Set up backend
 cd backend
 python -m venv venv
-# Windows:
 venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
-
 pip install -r requirements.txt
-uvicorn app:app --reload  # Backend runs at http://localhost:8000
+uvicorn app:app --reload
+# Visit: http://localhost:8000
+
+# 3. Set up frontend
 cd ../frontend
 npm install
-npm run dev  # Frontend runs at http://localhost:3000
-# One-time install if not done:
-curl -fsSL https://ollama.com/install.sh | sh
+npm run dev
+# Visit: http://localhost:3000
 
-# Then run the model:
-ollama run mistral  # Starts LLM at http://localhost:11434
-git init
-git add .
-git commit -m "Initial commit for LearnLoop"
-gh repo create smart-tutor-ai --public --source=. --push
+# 4. Start Ollama and run model
+ollama run mistral
